@@ -6,9 +6,10 @@ public class RecursiveFibonacci {
         return fibonacci(n-1) + fibonacci(n-2);
     }
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int n= sc.nextInt();
-        System.out.println("The " +n+"-th fibonacci number is: "+ fibonacci(n));
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a number: ");
+            int n= sc.nextInt();
+            System.out.println("The " +n+"-th fibonacci number is: "+ fibonacci(n));
+        }
     }
 }

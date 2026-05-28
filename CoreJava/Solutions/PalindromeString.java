@@ -2,19 +2,19 @@ import java.util.*;
 public class PalindromeString {
 
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        
-        System.out.println("Enter a string");
-        String str= sc.nextLine();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a string");
+            String str= sc.nextLine();
 
-        str= str.replaceAll("[^0-9a-z]", "").toLowerCase();
+            str= str.replaceAll("[^0-9a-z]", "").toLowerCase();
 
-        String rev= new StringBuilder(str).reverse().toString();
-        if(rev.equals(str)){
-            System.out.println("Palindrome");
-        }
-        else{
-            System.out.println("Not Palindrome");
+            String rev= new StringBuilder(str).reverse().toString();
+            if(rev.equals(str)){
+                System.out.println("Palindrome");
+            }
+            else{
+                System.out.println("Not Palindrome");
+            }
         }
     }
 }
