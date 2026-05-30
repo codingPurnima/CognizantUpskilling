@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Local Community Event Portal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../CSS3/styles.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+          rel="stylesheet">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header id="mainHeader">
+
+        <h1 style="color: yellow;">
+            Local Community Event Portal
+        </h1>
+
+        <nav>
+
+            <ul class="navMenu">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Welcome Section -->
+
+    <section id="home" class="sectionHeader">
+
+        <h2>Welcome to the Community Portal</h2>
+
+        <p class="highlight">
+            Register for exciting local events and activities.
+        </p>
+
+        <p>
+            <span class="specialOffer">
+                Special Offer: Free goodies for early registration!
+            </span>
+        </p>
+
+    </section>
+
+    <!-- Event Gallery -->
+
+    <section id="gallery">
+
+        <h2>Event Gallery</h2>
+
+        <table>
+
+            <tr>
+
+                <td>
+                    <img src="event1.jpg"
+                         alt="Music Event"
+                         title="Music Event"
+                         class="event-img"
+                         ondblclick="enlargeImage(this)">
+                </td>
+
+                <td>
+                    <img src="event2.jpg"
+                         alt="Sports Event"
+                         title="Sports Event"
+                         class="event-img"
+                         ondblclick="enlargeImage(this)">
+                </td>
+
+                <td>
+                    <img src="event3.jpg"
+                         alt="Workshop"
+                         title="Workshop"
+                         class="event-img"
+                         ondblclick="enlargeImage(this)">
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Filter & Search -->
+
+    <section>
+
+        <h2>Find Events</h2>
+
+        <select id="categoryFilter">
+
+            <option value="All">All</option>
+            <option value="Music">Music</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Sports">Sports</option>
+
+        </select>
+
+        <input type="text"
+               id="searchBox"
+               placeholder="Search event by name">
+
+    </section>
+
+    <!-- Dynamic Events -->
+
+    <section id="events">
+
+        <h2>Upcoming Events</h2>
+
+        <div id="loading">
+            Loading events...
+        </div>
+
+        <div id="eventContainer"></div>
+
+    </section>
+
+    <!-- Registration Form -->
+
+    <section id="register">
+
+        <h2>Register for Event</h2>
+
+        <form id="registrationForm">
+
+            <input type="text"
+                   name="username"
+                   placeholder="Enter Name"
+                   autofocus>
+
+            <span class="error" id="nameError"></span>
+
+            <input type="email"
+                   name="email"
+                   placeholder="Enter Email">
+
+            <span class="error" id="emailError"></span>
+
+            <input type="text"
+                   id="phone"
+                   placeholder="Enter Phone Number"
+                   onblur="validatePhone()">
+
+            <span class="error" id="phoneError"></span>
+
+            <input type="date" name="eventDate">
+
+            <select id="eventType"
+                    name="eventName"
+                    onchange="showFee()">
+
+                <option value="">Select Event</option>
+                <option value="Music Fiesta">Music Fiesta</option>
+                <option value="Baking Workshop">Baking Workshop</option>
+                <option value="Football Match">Football Match</option>
+
+            </select>
+
+            <span class="error" id="eventError"></span>
+
+            <p id="feeDisplay"></p>
+
+            <textarea id="feedback"
+                      placeholder="Enter feedback"
+                      onkeyup="countChars()"></textarea>
+
+            <p id="charCount">Characters: 0</p>
+
+            <button type="submit"
+                    id="registerBtn"
+                    class="cta-button">
+                Register
+            </button>
+
+            <output id="result"></output>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+    <!-- Video Section -->
+
+    <section>
+
+        <h2>Event Promo Video</h2>
+
+        <video width="500"
+               controls
+               oncanplay="videoReady()">
+
+            <source src="promo.mp4"
+                    type="video/mp4">
+
+        </video>
+
+        <p id="videoMessage"></p>
+
+    </section>
+
+    <!-- Geolocation -->
+
+    <section>
+
+        <h2>Find Nearby Events</h2>
+
+        <button onclick="findLocation()">
+            Find Nearby Events
+        </button>
+
+        <p id="location"></p>
+
+    </section>
+
+    <!-- Multi Column Layout -->
+
+    <section>
+
+        <h2>Community Bulletin</h2>
+
+        <div class="newsArticle">
+
+            The Local Community Event Portal allows residents to participate in music festivals,
+            workshops, sports meets, cultural celebrations, and social awareness programs.
+            The system helps citizens register online, receive updates, and connect with the
+            local community. The portal is responsive and works across phones, tablets, and desktops.
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: community@events.com</p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Community Event Portal
+        </p>
+
+    </footer>
+
+    <!-- External JS -->
+
+    <script src="../JavaScript/main.js"></script>
+
+</body>
+</html>
