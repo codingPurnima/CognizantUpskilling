@@ -1,0 +1,284 @@
+
+/* Universal Selector */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #f4f4f4;
+
+    background-image: url("background.jpg");
+
+    background-size: cover;
+
+    padding: 20px;
+}
+
+/* Header */
+
+#mainHeader{
+
+    background: rgba(0,0,0,0.8);
+
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+/* Navigation */
+
+.navMenu{
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+.navMenu li{
+    margin: 10px;
+}
+
+/* Links */
+
+.navMenu a{
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.navMenu a:hover{
+    color: yellow;
+}
+
+/* Section Header */
+
+.sectionHeader{
+
+    background: linear-gradient(to right,
+                #007BFF,
+                #00C6FF);
+
+    color: white;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.specialOffer{
+
+    color: yellow;
+
+    font-size: 20px;
+}
+
+/* Gallery */
+
+.event-img{
+
+    width: 250px;
+
+    height: 180px;
+
+    border: 3px solid black;
+
+    border-radius: 10px;
+}
+
+/* Tables */
+
+table{
+
+    margin-top: 20px;
+
+    border-collapse: collapse;
+}
+
+td{
+    padding: 15px;
+}
+
+/* Forms */
+
+form{
+
+    background: white;
+
+    width: 450px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+}
+
+input,
+textarea,
+select{
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid gray;
+}
+
+input:focus,
+textarea:focus{
+
+    outline: 3px solid blue;
+}
+
+.error{
+
+    color: red;
+
+    font-size: 14px;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+
+button,
+.cta-button{
+
+    background-color: #007BFF;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+/* Event Cards */
+
+#eventContainer{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.eventCard{
+
+    background: white;
+
+    padding: 20px;
+
+    width: 250px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 5px gray;
+}
+
+/* Multi Column */
+
+.newsArticle{
+
+    column-count: 2;
+
+    column-gap: 30px;
+
+    column-rule: 1px solid gray;
+
+    margin-top: 20px;
+
+    text-align: justify;
+}
+
+/* Loading */
+
+#loading{
+
+    display: none;
+
+    color: blue;
+
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer{
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px){
+
+    .navMenu{
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    #eventContainer{
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .newsArticle{
+        column-count: 1;
+    }
+
+    .event-img{
+
+        width: 100%;
+
+        height: auto;
+    }
+}
